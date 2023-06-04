@@ -95,7 +95,8 @@ class Trainer:
         print("Training is using:\n  ", self.device)
 
         # data
-        datasets_dict = {"kitti": datasets.KITTIRAWDataset,
+        datasets_dict = {"infra" : datasets.INFRADataset,
+                         "kitti": datasets.KITTIRAWDataset,
                          "kitti_odom": datasets.KITTIOdomDataset,
                          "cityscapes_preprocessed": datasets.CityscapesPreprocessedDataset
                          }

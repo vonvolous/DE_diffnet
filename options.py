@@ -19,7 +19,7 @@ class MonodepthOptions:
         self.parser.add_argument("--log_dir",
                                  type=str,
                                  help="log directory",
-                                 default=os.path.join(os.path.expanduser("~"), "tmp_hpc"))
+                                 default=os.path.join(os.path.expanduser("./"), "tmp_hpc"))
 
         # TRAINING options
         self.parser.add_argument("--model_name",
@@ -40,7 +40,7 @@ class MonodepthOptions:
                                  type=str,
                                  help="dataset to train on",
                                  default="kitti",
-                                 choices=["vk2", "kitti", "kitti_odom", "kitti_depth", "kitti_test","cityscapes_preprocessed"])
+                                 choices=["infra", "vk2", "kitti", "kitti_odom", "kitti_depth", "kitti_test","cityscapes_preprocessed"])
         self.parser.add_argument("--png",
                                  help="if set, trains from raw KITTI png files (instead of jpgs)",
                                  action="store_true")
